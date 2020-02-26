@@ -92,13 +92,15 @@ Connect the Jetson Board to your computer using the microusb as shown in the ima
 
 
 
-![Jetson Nano Setup](jetson_nano_pins_setup_photo.jpg)
+![Jetson Nano Setup](jetson_nano_pins_setup_photo.jpg)  
 **Image 2. Recovery mode setup for Jetson Nano**
 
 
 
 
-![Jetson Nano Pins](jetson_nano_pins.PNG)
+![Jetson Nano Pins](jetson_nano_pins.PNG)  
+
+
 **Image 3. Pins Diagram for Jetson Nano**
 
 
