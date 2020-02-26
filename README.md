@@ -101,3 +101,20 @@ sudo dd if=wrlinux-image-glibc-std-sato.sdcard of=/dev/***** bs=8k
 **Warning: substitute the of= device to the one that points to your sdcard**
 **Failure to do so can lead to unexpected erase of hard disks**
 
+
+## Deploy the target
+
+Boot up the board and find the ip address with the command `ifconfig`.
+
+Then, ssh into the machine and run docker:
+
+```bash
+$ ssh root@<ip_address>
+$ wget https://github.com/paroque28/wrl-lts19-nvidia-containers/raw/master/tensorflow_demo.py
+# docker run --runtime nvidia -e LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64/ -v $(pwd):/root -it tianxiang84/l4t-base:all
+```
+
+Inside the container run:
+```bash
+python3 /root/tensorflow_demo.py
+```
