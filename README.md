@@ -9,7 +9,14 @@ The required Jetpack version is 4.3
 ```bash
 /opt/nvidia/sdkmanager/sdkmanager
 ```
+
+
+
+
 ![SDK Manager](dowload_jetpack_4.3.PNG)
+ **Image 1. SDK Manager installation**
+ 
+ 
  
  
 ## Creating the project
@@ -82,10 +89,20 @@ cd wrlinux-jetson-nano
 
 ```
 Connect the Jetson Board to your computer using the microusb as shown in the image:
-![Jetson Nano Setup](jetson_nano_pins_setup_photo.jpg)
 
-**Pins Diagram for Jetson Nano**
+
+
+![Jetson Nano Setup](jetson_nano_pins_setup_photo.jpg)
+**Image 2. Recovery mode setup for Jetson Nano**
+
+
+
+
 ![Jetson Nano Pins](jetson_nano_pins.PNG)
+**Image 3. Pins Diagram for Jetson Nano**
+
+
+
 
 After connecting the board, run:
 
