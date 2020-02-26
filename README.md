@@ -65,6 +65,11 @@ echo "NVIDIA_DEVNET_MIRROR='file:///home/$USER/Downloads/nvidia/sdkm_downloads'"
 echo 'CUDA_BINARIES_NATIVE = "cuda-binaries-ubuntu1604-native"' >> conf/local.conf
 
 ```
+Enable ldconfig required by the nvidia-container-runtime
+```bash
+echo 'DISTRO_FEATURES_append = " ldconfig"' >> conf/local.conf
+
+```
 ## Build the project
 ```bash
 bitbake wrlinux-image-glibc-std-sato
