@@ -17,7 +17,7 @@ The required Jetpack version is 4.3
  **Image 1. SDK Manager installation**  
  
  
- If you experience issues with Ycto not finding the debian packages run:
+ Note: If you experience issues with Ycto not finding the debian packages run:
  ```bash
  $ mkdir /home/$USER/Downloads/nvidia/sdkm_downloads/NoDLA
  $ cp /home/$USER/Downloads/nvidia/sdkm_downloads/libnv* /home/$USER/Downloads/nvidia/sdkm_downloads/NoDLA
