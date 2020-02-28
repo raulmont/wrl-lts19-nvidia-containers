@@ -36,7 +36,7 @@ git clone --branch WRLINUX_10_19_LTS https://windshare.windriver.com/remote.php/
 ```bash
 git clone --single-branch --branch wip-container-32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
-
+**Tested with: https://github.com/madisongh/meta-tegra/commit/961046675ec56a40520ac937a5285af1d192fa72**
 ```bash
 . ./environment-setup-x86_64-wrlinuxsdk-linux
 . ./oe-init-build-env
