@@ -41,7 +41,7 @@ Note: wrlinux-graphics is not required but it can be used for some demos that re
 ```bash
 git clone --single-branch --branch wip-container-32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
-**Tested with: https://github.com/madisongh/meta-tegra/commit/961046675ec56a40520ac937a5285af1d192fa72**
+**Tested with: https://github.com/madisongh/meta-tegra/commit/15c0a4979348d76737af7d5a184dadeb52b055c4**
 ```bash
 . ./environment-setup-x86_64-wrlinuxsdk-linux
 . ./oe-init-build-env
