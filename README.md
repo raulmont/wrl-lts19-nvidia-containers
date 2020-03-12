@@ -19,7 +19,8 @@ The required Jetpack version is 4.3
  **Image 1. SDK Manager installation**  
  
  
- Note: If you experience issues with Ycto not finding the debian packages run:
+If you need to include TensorRT in your builds, you must create the subdirectory and move all of the TensorRT packages downloaded by the SDK Manager there.
+
  ```bash
  $ mkdir /home/$USER/Downloads/nvidia/sdkm_downloads/NoDLA
  $ cp /home/$USER/Downloads/nvidia/sdkm_downloads/libnv* /home/$USER/Downloads/nvidia/sdkm_downloads/NoDLA
