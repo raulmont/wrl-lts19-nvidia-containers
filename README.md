@@ -1,6 +1,8 @@
 # NVIDIA container runtime for Wind River Linux
 This demo is part of the WindRiver Labs project available at: http://labs.windriver.com
 
+To enable NVIDIA containers Docker need to have the nvidia-containers-runtime which is a modified version of runc adding a custom pre-start hook to all containers.
+
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
 
@@ -136,11 +138,11 @@ Then, ssh into the machine and run docker:
 
 ```bash
 $ ssh root@<ip_address>
-$ wget https://github.com/paroque28/wrl-lts19-nvidia-containers/raw/master/tensorflow_demo.py
-# docker run --runtime nvidia -e LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64/ -v $(pwd):/root -it tianxiang84/l4t-base:all
+# docker run --runtime nvidia -e LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64/ -it tianxiang84/l4t-base:all
 ```
 
 Inside the container run:
 ```bash
-python3 /root/tensorflow_demo.py
+wget https://github.com/paroque28/wrl-lts19-nvidia-containers/raw/master/tensorflow_demo.py
+python3 ./tensorflow_demo.py
 ```
