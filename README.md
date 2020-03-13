@@ -3,6 +3,9 @@ This demo is part of the WindRiver Labs project available at: http://labs.windri
 
 To enable NVIDIA containers, Docker needs to have the nvidia-containers-runtime which is a modified version of runc that adds a custom pre-start hook to all containers. The nvidia-containers-runtime communicates docker using the library libnvidia-container, which automatically configures GNU/Linux containers leveraging NVIDIA hardware. This library relies on kernel primitives and is designed to be agnostic of the container runtime.
 
+Note: this setup is based on Linux for Tegra and not the original linux-yocto
+
+
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
 
