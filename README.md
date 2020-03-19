@@ -151,11 +151,10 @@ Then, ssh into the machine and run docker:
 
 ```bash
 $ ssh root@<ip_address>
-# docker run --runtime nvidia -e LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64/ -it tianxiang84/l4t-base:all
+# docker run --runtime nvidia -it paroque28/l4t-tensorflow
 ```
 
 Inside the container run:
 ```bash
-wget https://github.com/paroque28/wrl-lts19-nvidia-containers/raw/master/tensorflow_demo.py
 python3 ./tensorflow_demo.py
 ```
