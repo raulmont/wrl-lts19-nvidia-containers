@@ -36,16 +36,16 @@ If you need to include TensorRT in your builds, you must create the subdirectory
 
 ```bash
 git clone --branch WRLINUX_10_19_LTS https://windshare.windriver.com/remote.php/gitsmart/WRLinux-lts-19-Core/wrlinux-x
-./wrlinux-x/setup.sh --all-layers --dl-layers --templates feature/docker --distro wrlinux-graphics
+./wrlinux-x/setup.sh --all-layers --dl-layers --templates feature/docker
 ```
 
-Note: wrlinux-graphics is not required but it can be used for some demos that require x11.
+Note: --distro wrlinux-graphics can be used for some applications that require x11.
 
 ### Add meta-tegra layer
 ```bash
-git clone --single-branch --branch wip-container-32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
+git clone --single-branch --branch master https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
-**Tested with: https://github.com/madisongh/meta-tegra/commit/15c0a4979348d76737af7d5a184dadeb52b055c4**
+**Tested with: https://github.com/madisongh/meta-tegra/commit/177a5f313bdde7da3a90ed012660a4b068249ba4**
 ```bash
 . ./environment-setup-x86_64-wrlinuxsdk-linux
 . ./oe-init-build-env
