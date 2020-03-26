@@ -9,7 +9,7 @@ Note: this setup is based on Linux for Tegra and not the original Yocto Linux Ke
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
 
-Go into https://developer.nvidia.com/embedded/downloads , download the NVIDIA SDK Manager, install it and download all the files for the Jetson board you own.All the effort to port these libraries and tools to Yocto was submited to the community and now is part of the meta-tegra layer which is maintained by Matt Madison
+Go into https://developer.nvidia.com/embedded/downloads , download the NVIDIA SDK Manager, install it and download all the files for the Jetson board you own.All the effort to port these libraries and tools to Yocto was submited to the community and now is part of the meta-tegra layer which is maintained by Matt Madison.
 The required Jetpack version is 4.3
 ```bash
 /opt/nvidia/sdkmanager/sdkmanager
@@ -43,7 +43,7 @@ Note: --distro wrlinux-graphics can be used for some applications that require x
 
 ### Add meta-tegra layer
 ```bash
-git clone --single-branch --branch master https://github.com/madisongh/meta-tegra.git layers/meta-tegra
+git clone --branch zeus-l4t-r32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
 **Tested with: https://github.com/madisongh/meta-tegra/commit/177a5f313bdde7da3a90ed012660a4b068249ba4**
 ```bash
@@ -101,7 +101,7 @@ echo 'DISTRO_FEATURES_append = " ldconfig"' >> conf/local.conf
 ```
 ## Build the project
 ```bash
-bitbake wrlinux-image-glibc-std-sato
+bitbake wrlinux-image-glibc-std
 ```
 
 ## Burn the image into the SD card
