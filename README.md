@@ -45,7 +45,7 @@ Note: --distro wrlinux-graphics can be used for some applications that require x
 ```bash
 git clone --branch zeus-l4t-r32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
-**Tested with: https://github.com/madisongh/meta-tegra/commit/177a5f313bdde7da3a90ed012660a4b068249ba4**
+**Tested with: https://github.com/madisongh/meta-tegra/commit/11a02d02a7098350638d7bf3a6c1a3946d3432fd**
 ```bash
 . ./environment-setup-x86_64-wrlinuxsdk-linux
 . ./oe-init-build-env
