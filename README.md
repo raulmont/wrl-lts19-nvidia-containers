@@ -9,7 +9,7 @@ Note: this setup is based on Linux for Tegra and not the original Yocto Linux Ke
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
 
-Go into https://developer.nvidia.com/embedded/downloads , download the NVIDIA SDK Manager, install it and download all the files for the Jetson board you own.All the effort to port these libraries and tools to Yocto was submited to the community and now is part of the meta-tegra layer which is maintained by Matt Madison.
+Go into https://developer.nvidia.com/embedded/downloads , download the NVIDIA SDK Manager, install it and download all the files for the Jetson board you own. All the effort to port these libraries and tools to Yocto was submited to the community and now is part of the meta-tegra layer which is maintained by Matt Madison.
 The required Jetpack version is 4.3
 ```bash
 /opt/nvidia/sdkmanager/sdkmanager
@@ -133,11 +133,11 @@ After connecting the board, run:
 ```bash
 sudo ./dosdcard.sh
 ```
-This command will create the file `wrlinux-image-glibc-std-sato.sdcard` that contains the SD card image required to boot.
+This command will create the file `wrlinux-image-glibc-std.sdcard` that contains the SD card image required to boot.
 
 Burn the Image to the SD Card:
 ```bash
-sudo dd if=wrlinux-image-glibc-std-sato.sdcard of=/dev/***** bs=8k
+sudo dd if=wrlinux-image-glibc-std.sdcard of=/dev/***** bs=8k
 ```
 **Warning: substitute the of= device to the one that points to your sdcard**
 **Failure to do so can lead to unexpected erase of hard disks**
