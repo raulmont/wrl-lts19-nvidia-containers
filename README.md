@@ -34,7 +34,8 @@ To enable NVIDIA containers, Docker needs to have the nvidia-containers-runtime 
 Note: this setup is based on Linux for Tegra and not the original Yocto Linux Kernel
 
 ## Benefits, and Limitations
-
+The main benefit of GPUs inside containers is the portability and stability in the environment at the time of deployment. Of course, the development also sees benefits in having this portable environment as developers can collaborate more efficiently.
+However, there are limitations due to the nature of the NVIDIA environment. Containers are heavy-weight because they are based in Linux4Tegra image that contains libraries required on runtime. On the other hand, because of redistribution limitations, some libraries are not included in the container. This requires runc to mount some property code libraries, losing portability in the process.
 
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
@@ -196,4 +197,4 @@ python3 ./tensorflow_demo.py
 train-ai-is-now-rising-seven-times-faster-than-ever-before.
 - [2] Nvidia, nvidia-docker, [Online; accessed 15. Mar. 2020], Feb. 2020. [Online]. Available:https://github.com/NVIDIA/nvidia-docker.
 - [3] L. Benedicic and M. Gila, “Accessing gpus from containers in hpc”, 2016. [Online]. Available: http://sc16.supercomputing.org/sc-archive/tech_poster/poster_files/post187s2-file3.pdf.
-- [4]M. Madison, Container runtime for master, [Online; accessed 30. Mar. 2020], Mar. 2020. [Online]. Available:https://github.com/madisongh/meta-tegra/pull/266
+- [4] M. Madison, Container runtime for master, [Online; accessed 30. Mar. 2020], Mar. 2020. [Online]. Available:https://github.com/madisongh/meta-tegra/pull/266
