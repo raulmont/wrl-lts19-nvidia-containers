@@ -1,10 +1,39 @@
 # NVIDIA container runtime for Wind River Linux
-This demo is part of the WindRiver Labs project available at: http://labs.windriver.com
+
+## Introduction
+Training and using AI models are tasks that demand significant computational power. Current trends are pointing more to deep neural networks, which include thousands, if not millions of operations per iteration.
+In the past year, more and more researchers have sounded the alarm on the exploding costs of deep learning.
+The computing power needed to do AI is now rising seven times faster than ever before [1].
+These new needs are making hardware companies create hardware accelerators like Neural processing units, CPUs, and GPUS.
+
+
+Embedded systems are not an exception to this transformation. We see every day intelligent traffic lights, autonomous vehicles, intelligent IoT devices, and more.
+The current direction is to have accelerators inside these embedded devices, Systems On-Chip mainly.
+Hardware developers have embedded small accelerators like GPUs, FPGAs, and more into SOCs, SOMs, and other systems.
+We call these modern systems: heterogeneous computing architectures.
+
+The use of GPUs on Linux is not something new; we have been able to do so for many years. However, it would be great to accelerate the development and deployment of  HPC applications. Containers enable portability, stability, and many other characteristics when deploying an application. For this reason, companies are investing so much in these technologies. For instance, NVIDIA recently started a project that enables CUDA on Docker [2]. 
+
+One concern when dealing with containers is the loss of performance. However, when comparing the performance of the GPU with and without the containers environment, researchers found that no additional overhead is caused [3].
+The consistency in the performance is one of the principal benefits of containers over virtual machines; accessing the GPU is done seamlessly as the kernel stays the constant.
+
+## NVIDIA-Docker on Yocto
+
+
+Together with Matt Madison  (Maintainer of meta-tegra layer), we created the required recipes to build and deploy NVIDIA-docker on Wind River Linux LTS 19 (Yocto 3.0 Zeus).
+
+In this tutorial, you will find how to enable NVIDIA-containers on a custom distribution of Linux and run a small test application that leverages the use of GPUs inside a container.
+
+
+https://github.com/madisongh/meta-tegra/pull/266
+
+## Description
 
 To enable NVIDIA containers, Docker needs to have the nvidia-containers-runtime which is a modified version of runc that adds a custom pre-start hook to all containers. The nvidia-containers-runtime communicates docker using the library libnvidia-container, which automatically configures GNU/Linux containers leveraging NVIDIA hardware. This library relies on kernel primitives and is designed to be agnostic of the container runtime. All the effort to port these libraries and tools to Yocto was submitted to the community and now is part of the meta-tegra layer which is maintained by Matt Madison.
 
 Note: this setup is based on Linux for Tegra and not the original Yocto Linux Kernel
 
+## Benefits, and Limitations
 
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
@@ -158,3 +187,11 @@ Inside the container run:
 ```bash
 python3 ./tensorflow_demo.py
 ```
+
+
+## References
+
+- [1] K. Hao, “The computing power needed to train AI is now rising seven times faster than ever before”, MIT Technology Review, Nov. 2019. [Online]. Available: https://www.technologyreview.com/s/614700/the- computing- power- needed- to-
+train-ai-is-now-rising-seven-times-faster-than-ever-before.
+- [2] Nvidia, nvidia-docker, [Online; accessed 15. Mar. 2020], Feb. 2020. [Online]. Available:https://github.com/NVIDIA/nvidia-docker.
+- [3] L. Benedicic and M. Gila, “Accessing gpus from containers in hpc”, 2016. [Online]. Available: http://sc16.supercomputing.org/sc-archive/tech_poster/poster_files/post187s2-file3.pdf.
