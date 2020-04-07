@@ -3,7 +3,7 @@
 ## Introduction
 Training and using AI models are tasks that demand significant computational power. Current trends are pointing more to deep neural networks, which include thousands, if not millions of operations per iteration.
 In the past year, more and more researchers have sounded the alarm on the exploding costs of deep learning.
-The computing power needed to do AI is now rising seven times faster than ever before [1].
+The computing power needed to do AI is now rising seven times faster than ever before **[1]**.
 These new needs are making hardware companies create hardware accelerators like Neural processing units, CPUs, and GPUS.
 
 
@@ -12,20 +12,20 @@ The current direction is to have accelerators inside these embedded devices, Sys
 Hardware developers have embedded small accelerators like GPUs, FPGAs, and more into SOCs, SOMs, and other systems.
 We call these modern systems: heterogeneous computing architectures.
 
-The use of GPUs on Linux is not something new; we have been able to do so for many years. However, it would be great to accelerate the development and deployment of  HPC applications. Containers enable portability, stability, and many other characteristics when deploying an application. For this reason, companies are investing so much in these technologies. For instance, NVIDIA recently started a project that enables CUDA on Docker [2]. 
+The use of GPUs on Linux is not something new; we have been able to do so for many years. However, it would be great to accelerate the development and deployment of  HPC applications. Containers enable portability, stability, and many other characteristics when deploying an application. For this reason, companies are investing so much in these technologies. For instance, NVIDIA recently started a project that enables CUDA on Docker **[2]**. 
 
-One concern when dealing with containers is the loss of performance. However, when comparing the performance of the GPU with and without the containers environment, researchers found that no additional overhead is caused [3].
+One concern when dealing with containers is the loss of performance. However, when comparing the performance of the GPU with and without the containers environment, researchers found that no additional overhead is caused **[3]**.
 The consistency in the performance is one of the principal benefits of containers over virtual machines; accessing the GPU is done seamlessly as the kernel stays the constant.
 
 ## NVIDIA-Docker on Yocto
 
 
-Together with Matt Madison  (Maintainer of meta-tegra layer), we created the required recipes to build and deploy NVIDIA-docker on Wind River Linux LTS 19 (Yocto 3.0 Zeus).
+Together with Matt Madison  (Maintainer of meta-tegra layer), we created the required recipes to build and deploy NVIDIA-docker on Wind River Linux LTS 19 (Yocto 3.0 Zeus).**[4]**
 
 In this tutorial, you will find how to enable NVIDIA-containers on a custom distribution of Linux and run a small test application that leverages the use of GPUs inside a container.
 
 
-https://github.com/madisongh/meta-tegra/pull/266
+
 
 ## Description
 
@@ -34,6 +34,7 @@ To enable NVIDIA containers, Docker needs to have the nvidia-containers-runtime 
 Note: this setup is based on Linux for Tegra and not the original Yocto Linux Kernel
 
 ## Benefits, and Limitations
+
 
 ## Prerequisites
 You are required to download NVIDIA property code from their website. To do so, you will need to create an NVIDIA Developer Network aacount.
@@ -195,3 +196,4 @@ python3 ./tensorflow_demo.py
 train-ai-is-now-rising-seven-times-faster-than-ever-before.
 - [2] Nvidia, nvidia-docker, [Online; accessed 15. Mar. 2020], Feb. 2020. [Online]. Available:https://github.com/NVIDIA/nvidia-docker.
 - [3] L. Benedicic and M. Gila, “Accessing gpus from containers in hpc”, 2016. [Online]. Available: http://sc16.supercomputing.org/sc-archive/tech_poster/poster_files/post187s2-file3.pdf.
+- [4]M. Madison, Container runtime for master, [Online; accessed 30. Mar. 2020], Mar. 2020. [Online]. Available:https://github.com/madisongh/meta-tegra/pull/266
