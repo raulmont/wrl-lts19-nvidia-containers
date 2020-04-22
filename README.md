@@ -73,6 +73,7 @@ git clone --branch WRLINUX_10_19_BASE https://github.com/WindRiver-Labs/wrlinux-
 Note: --distro wrlinux-graphics can be used for some applications that require x11.
 
 ### Add meta-tegra layer
+**DISCAIMER: meta-tegra is a community maintained layer not supported by WindRiver at the time of writing** 
 ```bash
 git clone --branch zeus-l4t-r32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
