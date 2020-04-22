@@ -66,7 +66,7 @@ If you need to include TensorRT in your builds, you must create the subdirectory
 ## Creating the project
 
 ```bash
-git clone --branch WRLINUX_10_19_LTS https://github.com/WindRiver-Labs/wrlinux-x.git
+git clone --branch WRLINUX_10_19_BASE https://github.com/WindRiver-Labs/wrlinux-x.git
 ./wrlinux-x/setup.sh --all-layers --dl-layers --templates feature/docker
 ```
 
