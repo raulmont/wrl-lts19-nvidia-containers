@@ -77,7 +77,7 @@ Note: --distro wrlinux-graphics can be used for some applications that require x
 ```bash
 git clone --branch zeus-l4t-r32.3.1 https://github.com/madisongh/meta-tegra.git layers/meta-tegra
 ```
-**Tested with: https://github.com/madisongh/meta-tegra/commit/11a02d02a7098350638d7bf3a6c1a3946d3432fd**
+**Tested with: https://github.com/madisongh/meta-tegra/commit/74de93aa9cdce39fe536ebe677ad33079adb0bf2**
 ```bash
 . ./environment-setup-x86_64-wrlinuxsdk-linux
 . ./oe-init-build-env
@@ -124,7 +124,7 @@ echo 'CUDA_BINARIES_NATIVE = "cuda-binaries-ubuntu1604-native"' >> conf/local.co
 ```
 Add the Nvidia containers runtime, AI libraries and the AI libraries CSV files
 ```bash 
-echo 'IMAGE_INSTALL_append = " nvidia-docker nvidia-container-runtime cudnn tensorrt libvisionworks libvisionworks-sfm libvisionworks-tracking cuda-container-csv cudnn-container-csv tensorrt-container-csv libvisionworks-container-csv libvisionworks-sfm-container-csv libvisionworks-tracking-container-csv"' >> conf/local.conf
+echo 'IMAGE_INSTALL_append = " nvidia-docker nvidia-container-runtime cudnn tensorrt libvisionworks libvisionworks-sfm libvisionworks-tracking cudnn-container-csv tensorrt-container-csv libvisionworks-container-csv libvisionworks-sfm-container-csv libvisionworks-tracking-container-csv"' >> conf/local.conf
 ```
 Enable ldconfig required by the nvidia-container-runtime
 ```bash
