@@ -186,12 +186,11 @@ Then, ssh into the machine and run docker:
 
 ```bash
 $ ssh root@<ip_address>
-# docker run --runtime nvidia -it paroque28/l4t-tensorflow
 ```
 
-Inside the container run:
+Run the container:
 ```bash
-python3 ./tensorflow_demo.py
+# docker run --runtime nvidia -it paroque28/l4t-tensorflow python3 ./tensorflow_demo.py
 ```
 
 
