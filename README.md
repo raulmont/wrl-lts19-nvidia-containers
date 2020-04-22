@@ -250,8 +250,38 @@ root@jetson-nano-qspi-sd:~#
 
 ## References
 
-- [1] K. Hao, “The computing power needed to train AI is now rising seven times faster than ever before”, MIT Technology Review, Nov. 2019. [Online]. Available: https://www.technologyreview.com/s/614700/the- computing- power- needed- to-
-train-ai-is-now-rising-seven-times-faster-than-ever-before.
+- [1] K. Hao, “The computing power needed to train AI is now rising seven times faster than ever before”, MIT Technology Review, Nov. 2019. [Online]. Available: https://www.technologyreview.com/s/614700/the- computing-power-needed-to-train-ai-is-now-rising-seven-times-faster-than-ever-before.
 - [2] Nvidia, nvidia-docker, [Online; accessed 15. Mar. 2020], Feb. 2020. [Online]. Available:https://github.com/NVIDIA/nvidia-docker.
 - [3] L. Benedicic and M. Gila, “Accessing gpus from containers in hpc”, 2016. [Online]. Available: http://sc16.supercomputing.org/sc-archive/tech_poster/poster_files/post187s2-file3.pdf.
 - [4] M. Madison, Container runtime for master, [Online; accessed 30. Mar. 2020], Mar. 2020. [Online]. Available:https://github.com/madisongh/meta-tegra/pull/266
+
+## Project License
+```
+Copyright (C) 2019 Wind River Systems, Inc.
+
+All metadata is MIT licensed unless otherwise stated. Source code included
+in tree for individual recipes is under the LICENSE stated in each recipe
+(.bb file) unless otherwise stated.
+```
+
+## Legal Notices
+```
+If product is based on Wind River Linux:
+
+All product names, logos, and brands are property of their respective owners.
+All company, product and service names used in this software are for identification
+purposes only. Wind River are registered trademarks of Wind River Systems.
+
+Disclaimer of Warranty / No Support: Wind River does not provide support and
+maintenance services for this software, under Wind River’s standard Software
+Support and Maintenance Agreement or otherwise. Unless required by applicable
+law, Wind River provides the software (and each contributor provides its
+contribution) on an “AS IS” BASIS, WITHOUT WARRANTIES OF ANY KIND, either express
+or implied, including, without limitation, any warranties of TITLE, NONINFRINGEMENT,
+MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible
+for determining the appropriateness of using or redistributing the software
+and assume ay risks associated with your exercise of permissions under the license.
+```
+
+## Attribution
+TensorFlow, the TensorFlow logo and any related marks are trademarks of Google Inc.
