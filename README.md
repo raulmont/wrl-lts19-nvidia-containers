@@ -254,11 +254,13 @@ Note the use of the GPU0:
 2020-04-22 21:13:58.210600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 268 MB memory) -> physical GPU (device: 0, name: NVIDIA Tegra X1, pci bus id: 0000:00:00.0, compute capability: 5.3)
 ```
 ## Conclusions
-The use of NVIDIA-containers allows a smooth deployment of AI applications. Once you have your Linux distribution running containers and the custom NVIDIA runtime is as simple as running one command to get a Neural Network to work, as we saw in the previous demo. Getting a Tegra board to run computing-intensive workloads is now easier than ever.
 
-To get everything rolling, you need a custom RUNC engine that allows the use of CUDA and other related libraries. After that, you will be running applications as if they were on bare-metal. 
+The use of NVIDIA-containers allows a smooth deployment of AI applications. Once you have your Linux distribution running containers with the custom NVIDIA runtime, getting a Neural Network to work is as simple as running one command. Getting an NVIDIA Tegra board to run computing-intensive workloads is now easier than ever.
 
-One of the possibilities the containers offer is combining this setup with Kubernetes or even EGX from NVIDIA so that you can do the orchestration. The K8S device plugins allow you to distribute and manage workloads across multiple acceleration devices, giving you High Availability and a bunch of other benefits. Mix this with other technologies such as FPGAs, and you will have an army of edge devices ready to run your Intelligent applications for you.
+With the provided custom RUNC engine that allows the use of CUDA and other related libraries, you will be running applications as if they were on bare-metal.
+
+One of the possibilities the containers offer is combining this setup with Kubernetes or the Nvidia EGX Platform so that you can do the orchestration. The K8S device plugins distribute and manage workloads across multiple acceleration devices, giving you high availability as well as other benefits. Combined with other technologies such as Tensorflow and OpenCV, and you will have an army of edge devices ready to run your Intelligent applications for you.
+
 ## References
 
 - [1] K. Hao, “The computing power needed to train AI is now rising seven times faster than ever before”, MIT Technology Review, Nov. 2019. [Online]. Available: https://www.technologyreview.com/s/614700/the- computing-power-needed-to-train-ai-is-now-rising-seven-times-faster-than-ever-before.
